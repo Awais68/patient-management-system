@@ -1,7 +1,7 @@
 import HeroSection from "@/components/HeroSection";
-import Header from "@/components/Header";
+// import Header from "@/components/Header";
 import DoctorSection from "@/components/DoctorSection";
-import Doctors from "@/app/doctors/page"
+// import Doctors from "@/app/doctors/page"
 
 
 

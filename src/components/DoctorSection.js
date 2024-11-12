@@ -1,9 +1,9 @@
 import {
   Select,
   SelectContent,
-  SelectGroup,
+  // SelectGroup,
   SelectItem,
-  SelectLabel,
+  // SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
@@ -20,8 +20,8 @@ import * as React from "react";
 import {categories, doctors} from "@/lib/section";
 import { Button } from "./ui/button";
 import Link from "next/link";
-import Image from "next/image";
-import { AvatarIcon, ClockIcon, TimerIcon } from "@radix-ui/react-icons";
+// import Image from "next/image";
+import {  ClockIcon,  } from "@radix-ui/react-icons";
 import { Avatar, AvatarFallback } from "./ui/avatar";
 import {  AvatarImage } from "@radix-ui/react-avatar";
 import {  HomeIcon } from "@radix-ui/react-icons"
