@@ -1,6 +1,9 @@
+"use client"
+
 import Image from "next/image";
 import { Button } from "./ui/button";
 import Link from "next/link";
+
 
 
 export default function HeroSection() {
@@ -26,10 +29,10 @@ export default function HeroSection() {
                 Find Doctor You Need
               </Button>
               
-              <Link href={"/ApplyForm"}>
-            <Button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-b-4 py-2 px-6 focus:outline-1 hover:bg-gray-200 rounded text-lg">
+              <Link href={"/doctors/apply"}
+             className="ml-4 inline-flex text-gray-700 bg-gray-100 border-b-4 py-2 px-6 focus:outline-1 hover:bg-gray-200 rounded text-lg">
                 Apply As a Doctor
-              </Button>
+              
             </Link>
             </div>
           </div>

@@ -2,17 +2,18 @@ import { Button } from "@/components/ui/button"
 import { doctors } from "@/lib/section"
 import { ClockIcon, HomeIcon, PlusIcon,  } from "@radix-ui/react-icons"
 import Image from "next/image"
-
+import { DatePicker } from "@/components/DatePicker"
 
 
 
 export default function DoctorDetail({ params }) {
 
-    const doctorInfo = doctors.find((doctor) => doctor.id == params.id )
+  console.log('doctorInfo',doctors)
+  const doctorInfo = doctors.find((doctor) => doctor.id == params.id )
     return(
         <div className="min-h-screen">
               
-            <section className="text-gray-600 body-font overflow-hidden">
+            <section className="text-gray-600 body-font overflow-hidden ">
   <div className="container px-5 py-24 mx-auto">
     <div className="lg:w-4/5 mx-auto flex flex-wrap">
       <div className="  lg:w-1/2 relative w-full lg:h-auto h-64 object-cover object-center rounded ">
@@ -161,8 +162,9 @@ export default function DoctorDetail({ params }) {
               <h1>${doctorInfo.fees}</h1>
             </div>
             <div>
-                <h1 className="font-bold font-serif font-3xl">Pick Your Date of Appointment </h1>
-              
+                
+              <DatePicker  />
+
               <Button className=" mt-10 w-full  rounded  bg-gradient-to-r from-teal-400 to-blue-300 hover:from-pink-200 hover:to-orange-200" >Book Your Appointment </Button>
             </div>
       </div>
