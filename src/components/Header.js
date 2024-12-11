@@ -14,16 +14,16 @@ import {
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { Avatar, AvatarImage } from "@radix-ui/react-avatar";
-import { auth } from "../../auth";
+import { auth, signOut } from "../../auth";
 import Image from "next/image";
 
 export default async function Header() {
 	const session = await auth();
-	console.log("session in Header==>", session);
+	//console.log("session in Header==>", session);
 	return (
 		<>
 			<div className='text-gray-600 body-font'>
-				<div className='container border-b-2 shadow-blue-500  mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center'>
+				<div className='container border-b-1 shadow-blue-500  mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center'>
 					<a className='flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0'>
 						<span className=' text-2xl font-serif'>EasyAppintment </span>
 						<span className='ml-1 font- text-gray-400 mt-2 '>
@@ -66,10 +66,18 @@ export default async function Header() {
 									</Link>
 									<Link href={"/appointment"}>
 										<MenubarItem>My Appointment </MenubarItem>
-										<MenubarSeparator />
 									</Link>
-									<MenubarItem>Logout </MenubarItem>
 									<MenubarSeparator />
+
+									<form
+										action={async () => {
+											"use server";
+											await signOut("google");
+										}}>
+										<Button type='submit' className='bg-white text-black p-4'>
+											logout
+										</Button>
+									</form>
 								</MenubarContent>
 							</MenubarMenu>
 						</Menubar>

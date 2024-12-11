@@ -3,7 +3,7 @@
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { signIn } from "../../../auth";
+import { auth, signIn } from "../../../auth";
 import { redirect } from "next/navigation";
 
 export default async function Signin() {

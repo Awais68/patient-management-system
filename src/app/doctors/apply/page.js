@@ -1,10 +1,10 @@
 /** @format */
 
-import DoctorForm from "@/components/DoctorForm";
-// import { auth } from "../../../../auth";
+import DoctorForm from "@/components/ApplyForm";
+import { auth } from "../../../../auth";
 
 export default async function ApplyAsDoctor() {
-	// const session = await auth();
+	const session = await auth();
 	return (
 		<div className='container mx-auto'>
 			<h1 className='font-bold text-2xl mt-10 text-center'>
@@ -36,7 +36,7 @@ export default async function ApplyAsDoctor() {
 				</div>
 			</div>
 
-			<DoctorForm />
+			<DoctorForm session={session} />
 		</div>
 	);
 }
